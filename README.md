@@ -1,69 +1,86 @@
-# data_science_mba
-Studying for my Data Science MBA
+# Student Grade Prediction
+Análise de desempenho acadêmico e segmentação de estudantes com Random Forest e K-Means.
 
 ---
 
-## Repository Projects & Structure
+## Estrutura do Repositório
 
 ```
-data_science_mba/
-├── kaggle_projects/
-│   └── students_grade_database/
-│       ├── student_grade_prediction copy.ipynb  # Statistical tests, RF & K-Means modeling
-│       ├── student_grade_ses_dataset.csv        # Dataset (12,025 records x 29 columns)
-│       ├── DATA_DICTIONARY.md                   # Full schema, null policies & range specs
-│       ├── model_card.md                        # Model card for RF Regressor & K-Means
-│       └── viz/                                 # Exported charts & analytical visualizations
-├── python_fundamentals/
-│   ├── fundamentals.ipynb                       # Core Python & data manipulation notebooks
-│   └── cheatsheets/                             # Quick-reference cheatsheets
-└── requirements.txt                             # Project dependencies
+students_grades_random_forest_project/
+├── student_grade_prediction copy.ipynb  # Testes estatísticos, modelagem RF & K-Means
+├── student_grade_ses_dataset.csv        # Dataset (12.025 registros × 29 colunas)
+├── DATA_DICTIONARY.md                   # Dicionário de dados, políticas de nulos e faixas
+├── model_card.md                        # Model card do RF Regressor & K-Means
+├── relatorio_executivo_rendimento_escolar.html  # Relatório executivo interativo
+├── tables/                              # Tabelas analíticas exportadas (CSV)
+├── viz/                                 # Gráficos e visualizações exportadas
+├── requirements.txt                     # Dependências do projeto
+└── index.html                           # Página de portfólio (GitHub Pages)
 ```
 
 ---
 
-## Python fundamental libraries
-- pandas: data manipulation
-- numpy: math
-- matplotlib: data viz
-- seaborn: data viz
-- scikit-learn: ML
+## Sobre o Projeto
 
-# Statistics fundamentals - Módulo de Nivelamento
+Este projeto analisa os fatores associados ao desempenho acadêmico de estudantes e identifica perfis de risco por meio de modelos de Machine Learning supervisionado e não supervisionado.
 
-## Estatística descritiva e Análise Exploratóris
-- Medidas de Posição (Centralidade): Média, Mediana e Moda para síntese da tendência central dos dados.
--  Medidas de Dispersão: Variância, Desvio-Padrão e Coeficiente de Variação (para comparar a variabilidade relativa de variáveis em diferentes escalas).
-- Objetivo de Negócios: Identificar o perfil inicial dos dados e detectar assimetrias ou valores discrepantes (outliers).
+### Objetivos
+- Identificar as variáveis socioeconômicas e comportamentais com maior impacto na nota final.
+- Construir um modelo preditivo de regressão com Random Forest.
+- Segmentar estudantes em perfis de desempenho com K-Means para priorizar intervenções pedagógicas.
 
-## Probabilidade, Amostragem & Teorema Central do Limit
-- Distribuições de Probabilidade: Distribuição Binomial (eventos discretos) e Distribuição Normal (variáveis contínuas).
-- Padronização: Normalização via z-score para permitir a comparação entre variáveis com médias e desvios distintos.
-- Amostragem & Teorema Central do Limite (TCL): Noções de amostragem representativa e a convergência das médias amostrais para uma distribuição normal em grandes amostras.
-- Objetivo de Negócios: Mapear riscos, incertezas e inferir comportamentos populacionais a partir de amostras.
+### Dataset
+- **Fonte:** Kaggle — `student_grade_ses_dataset.csv`
+- **Registros:** 12.025
+- **Features:** 29 colunas (variáveis socioeconômicas, comportamentais e acadêmicas)
+- **Target:** `final_grade_pct` — percentual da nota final do estudante
 
-## Inferência Estatística & Testes de Hipóteses
-- Formulação de Testes: Definição rigorosa da Hipótese Nula ($H_0$) e Hipótese Alternativa ($H_1$).
-- Testes Paramétricos: Teste t de Student (comparação entre dois grupos) e ANOVA básica (comparação entre três ou mais grupos).
-- Tomada de Decisão: Interpretação de p-valor e construção de Intervalos de Confiança.
-- Objetivo de Negócios: Validar hipóteses com rigor científico e fundamentar as premissas dos modelos de regressão do Módulo 2 do curso34.
+---
 
-# Python fundamentals
-## Lógica de Programação
-- Tipos de Dados: int, float, str, boolean.
-- Coleções de Dados: Listas, Tuplas e Dicionários (estruturas chave-valor)
-- Controle de Fluxo: Estruturas condicionais (if/elif/else) e laços de repetição (for, while).
-- Funções Personalizadas: Criação de blocos reutilizáveis com def.
-- Objetivo Prático: Desenvolver o raciocínio algorítmico e criar funções customizadas de tratamento de dados.
+## Metodologia
 
-## Manipulação de Dados Tabulares com Pandas & NumPy
-- Estrutura de Dados: Criação e navegação em DataFrames e vetores numéricos.
-- Navegação e Seleção: Indexação, fatiamento (slicing) e filtragem condicional de tabelas.
-- Tratamento de Dados: Identificação, remoção e imputação de valores ausentes/nulos.
-- Agregações e Resumos: Agrupamentos complexos com groupby para sumarizar métricas de negócios.
-- Objetivo Prático: Realizar o Data Wrangling (limpeza e organização) de bases brutas.
+### 1. Análise Exploratória & Testes Estatísticos
+- Medidas de posição e dispersão (média, mediana, desvio-padrão, CV).
+- Testes bivariados com correção de Bonferroni.
+- Testes t de Student e ANOVA para comparação de grupos.
 
-## Visualização Básica & Preparação para Machine Learning 
-- Visualização Exploratória: Gráficos rápidos de distribuição e relacionamento utilizando Matplotlib e Seaborn (histogramas, boxplots, dispersão) e usando mean(), std() e .quantile().
-- Estruturação de Variáveis: Separação da matriz de variáveis independentes/explicativas ($X$) e do vetor da variável dependente/resposta ($y$).
-- Objetivo Prático: Estruturar conjuntos de dados limpos e prontos para alimentar algoritmos de Machine Learning Supervisionado e Não Supervisionado67.
+### 2. Regressão Linear com Diagnóstico Robusto
+- Seleção de features via VIF (Variance Inflation Factor).
+- Modelagem cumulativa com critério AIC.
+- Diagnóstico de resíduos e erros-padrão robustos HC3.
+
+### 3. Random Forest Regressor
+- Benchmark de modelos (OLS, Ridge, Lasso, RF).
+- Importância por permutação (*Permutation Importance*).
+
+### 4. Segmentação com K-Means
+- Diagnóstico do número de clusters via curvas de cotovelo e silhueta.
+- Perfilamento dos clusters e recomendações pedagógicas.
+
+---
+
+## Resultados
+
+| Artefato | Descrição |
+|---|---|
+| [`relatorio_executivo_rendimento_escolar.html`](relatorio_executivo_rendimento_escolar.html) | Relatório executivo completo |
+| [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md) | Dicionário de dados |
+| [`model_card.md`](model_card.md) | Model card dos modelos treinados |
+| [`viz/`](viz/) | Visualizações exportadas |
+| [`tables/`](tables/) | Tabelas analíticas em CSV |
+
+---
+
+## Dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+Principais bibliotecas: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `statsmodels`.
+
+---
+
+## Autora
+
+**Amanda Freitas Carnaiba** — [Site pessoal](https://freitasamanda.github.io/)

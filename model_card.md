@@ -3,7 +3,7 @@
 ## Model Overview
 - **Model Architecture:** Random Forest Regressor & K-Means Clustering (K=4)
 - **Primary Objective:** Predict student final grade percentages (`final_grade_pct`), identify dominant socioeconomic and behavioral performance drivers, and segment student cohorts to prioritize intervention.
-- **Repository Location:** `kaggle_projects/students_grade_database/`
+- **Repository Location:** `/` (raiz do repositório)
 - **Notebook Reference:** `student_grade_prediction copy.ipynb`
 - **Owner / Author:** Data Science MBA Portfolio
 

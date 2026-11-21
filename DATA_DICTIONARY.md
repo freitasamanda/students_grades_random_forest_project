@@ -1,6 +1,6 @@
 # Data Dictionary: Student Grade & Socioeconomic Status (SES)
 
-**Dataset path:** `kaggle_projects/students_grade_database/student_grade_ses_dataset.csv`  
+**Dataset path:** `student_grade_ses_dataset.csv`  
 **Total Records:** 12,025  
 **Total Features:** 29  
 
