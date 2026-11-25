@@ -365,7 +365,10 @@
             box-shadow: 0 8px 20px -8px rgba(45, 43, 78, 0.16);
         }
 
-        .tldr-heading { margin-bottom: 1.25rem; }
+        .tldr-heading {
+            margin-bottom: 1.25rem;
+        }
+
         .tldr-badge {
             display: inline-block;
             padding: 0.3rem 0.7rem;
@@ -379,9 +382,20 @@
             text-transform: uppercase;
         }
 
-        .tldr-heading h2 { margin: 0.6rem 0 0.35rem; }
-        .tldr-heading p { margin: 0; }
-        .tldr-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+        .tldr-heading h2 {
+            margin: 0.6rem 0 0.35rem;
+        }
+
+        .tldr-heading p {
+            margin: 0;
+        }
+
+        .tldr-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
         .tldr-card {
             grid-column: span 3;
             padding: 1.2rem;
@@ -391,9 +405,20 @@
             background: rgba(255, 255, 255, 0.92);
         }
 
-        .tldr-card-wide { grid-column: 1 / -1; }
-        .tldr-card h3 { margin: 0.35rem 0 0.45rem; font-size: 1.05rem; }
-        .tldr-card p { margin: 0; font-size: 0.93rem; }
+        .tldr-card-wide {
+            grid-column: 1 / -1;
+        }
+
+        .tldr-card h3 {
+            margin: 0.35rem 0 0.45rem;
+            font-size: 1.05rem;
+        }
+
+        .tldr-card p {
+            margin: 0;
+            font-size: 0.93rem;
+        }
+
         .tldr-label {
             color: var(--primary);
             font-size: 0.74rem;
@@ -402,25 +427,74 @@
             text-transform: uppercase;
         }
 
-        .tldr-methods { border-top-color: #8298c7; }
-        .tldr-findings { border-top-color: #7770b5; }
-        .tldr-decisions { border-top-color: #6f9a82; }
-        .tldr-subgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; }
-        .tldr-subcard { padding: 1rem; border-radius: 10px; background: #f5f4fa; }
-        .tldr-subcard h4 { margin: 0 0 0.35rem; font-size: 0.96rem; }
-        .tldr-subcard p { font-size: 0.88rem; }
-        .tldr-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem 1rem; }
-        .tldr-action { padding-left: 0.8rem; border-left: 3px solid #c9c6e5; }
-        .tldr-action strong { display: block; margin-bottom: 0.2rem; color: var(--text-primary); }
+        .tldr-methods {
+            border-top-color: #8298c7;
+        }
+
+        .tldr-findings {
+            border-top-color: #7770b5;
+        }
+
+        .tldr-decisions {
+            border-top-color: #6f9a82;
+        }
+
+        .tldr-subgrid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.8rem;
+        }
+
+        .tldr-subcard {
+            padding: 1rem;
+            border-radius: 10px;
+            background: #f5f4fa;
+        }
+
+        .tldr-subcard h4 {
+            margin: 0 0 0.35rem;
+            font-size: 0.96rem;
+        }
+
+        .tldr-subcard p {
+            font-size: 0.88rem;
+        }
+
+        .tldr-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem 1rem;
+        }
+
+        .tldr-action {
+            padding-left: 0.8rem;
+            border-left: 3px solid #c9c6e5;
+        }
+
+        .tldr-action strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: var(--text-primary);
+        }
 
         @media (max-width: 768px) {
             .diff-grid {
                 grid-template-columns: 1fr;
             }
 
-            .tldr-section { padding: 1.25rem; }
-            .tldr-grid, .tldr-subgrid, .tldr-actions { grid-template-columns: 1fr; }
-            .tldr-card { grid-column: 1 / -1; }
+            .tldr-section {
+                padding: 1.25rem;
+            }
+
+            .tldr-grid,
+            .tldr-subgrid,
+            .tldr-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .tldr-card {
+                grid-column: 1 / -1;
+            }
 
             body {
                 padding: 1rem;
@@ -440,7 +514,8 @@
         <!-- HEADER -->
         <header>
             <span class="badge-tag">Data Science • Projeto Aplicado</span>
-            <h1>Relatório de Rendimento Escolar e Segmentação Pedagógica com Clustering e modelos de Feature Importance</h1>
+            <h1>Relatório de Rendimento Escolar e Segmentação Pedagógica com Clustering e modelos de Feature Importance
+            </h1>
             <p class="subtitle">
                 Análise de segmentação pedagógica,controle de múltiplos testes, diagnóstico de multicolinearidade (VIF),
                 modelagem cumulativa OLS robusta (HC3), machine learning com Random Forest e clusterização multifatorial
@@ -464,18 +539,25 @@
                 <article class="tldr-card">
                     <span class="tldr-label">01 · Problema de pesquisa</span>
                     <h3>O que está associado ao rendimento escolar?</h3>
-                    <p>Além das características demográficas, quais fatores familiares, socioeconômicos, tecnológicos e escolares se associam à nota final e ajudam a identificar estudantes em risco?</p>
+                    <p>Além das características demográficas, quais fatores familiares, socioeconômicos, tecnológicos e
+                        escolares se associam à nota final e ajudam a identificar estudantes em risco?</p>
                 </article>
                 <article class="tldr-card">
                     <span class="tldr-label">02 · Motivação pessoal</span>
                     <h3>Uma questão próxima da minha trajetória</h3>
-                    <p>Como Cientista Social e ex-professora, escolhi um tema que me é pessoalmente caro: analisar dados educacionais e transformar os resultados em subsídios para decisões pedagógicas.</p>
+                    <p>Como Cientista Social e ex-professora, escolhi um tema que me é pessoalmente caro: analisar dados
+                        educacionais e transformar os resultados em subsídios para decisões pedagógicas.</p>
                 </article>
                 <article class="tldr-card tldr-card-wide tldr-methods">
                     <span class="tldr-label">03 · Métodos aplicados</span>
                     <h3>Uma análise em etapas, com validações</h3>
-                    <p>Tracei hipóteses iniciais baseadas na literatura de Sociologia da Eduação, no meu background como Analista de Dados, Cientista Social e professora, e em buscar resultados altamente acionáveis para gestores pedagógicos e de políticas públicas.</p>
-                    <p>Na base de 12.025 estudantes, apliquei testes estatísticos com correção para múltiplas comparações (Holm/FDR), diagnóstico de multicolinearidade (VIF), modelos OLS cumulativos com erros robustos HC3, comparação preditiva entre Dummy, regressão linear e Random Forest, e K-Means (K=4) validado por cotovelo, silhueta e PCA.</p>
+                    <p>Tracei hipóteses iniciais baseadas na literatura de Sociologia da Eduação, no meu background como
+                        Analista de Dados, Cientista Social e professora, e em buscar resultados altamente acionáveis
+                        para gestores pedagógicos e de políticas públicas.</p>
+                    <p>Na base de 12.025 estudantes, apliquei testes estatísticos com correção para múltiplas
+                        comparações (Holm/FDR), diagnóstico de multicolinearidade (VIF), modelos OLS cumulativos com
+                        erros robustos HC3, comparação preditiva entre Dummy, regressão linear e Random Forest, e
+                        K-Means (K=4) validado por cotovelo, silhueta e PCA.</p>
                 </article>
                 <article class="tldr-card tldr-card-wide tldr-findings">
                     <span class="tldr-label">04 · Achados centrais por método</span>
@@ -483,15 +565,21 @@
                     <div class="tldr-subgrid">
                         <div class="tldr-subcard">
                             <h4>OLS robusto · associações</h4>
-                            <p>O modelo completo explica 20,9% da variação das notas (R² ajustado). Em associação com a nota, baixa renda aparece com −5,76 p.p. frente à alta renda; +10 p.p. de frequência, +2,2 p.p.; computador em casa, +0,94 p.p.; cada hora semanal de estudo, +0,18 p.p.</p>
+                            <p>O modelo completo explica 20,9% da variação das notas (R² ajustado). Em associação com a
+                                nota, baixa renda aparece com −5,76 p.p. frente à alta renda; +10 p.p. de frequência,
+                                +2,2 p.p.; computador em casa, +0,94 p.p.; cada hora semanal de estudo, +0,18 p.p.</p>
                         </div>
                         <div class="tldr-subcard">
                             <h4>Comparação preditiva</h4>
-                            <p>A regressão linear generalizou melhor que o Random Forest no teste (R² 0,193 vs. 0,120; MAE 7,88 vs. 8,24). A importância por permutação destacou renda familiar, horas de estudo e escolaridade dos pais.</p>
+                            <p>A regressão linear generalizou melhor que o Random Forest no teste (R² 0,193 vs. 0,120;
+                                MAE 7,88 vs. 8,24). A importância por permutação destacou renda familiar, horas de
+                                estudo e escolaridade dos pais.</p>
                         </div>
                         <div class="tldr-subcard">
                             <h4>K-Means · quatro perfis</h4>
-                            <p>Foram identificados grupos de risco (9,3%; nota média 38,8%), baixo rendimento (29%), na média (40%) e alto rendimento (21,7%). O grupo de risco também tem frequência média de 73,7%.</p>
+                            <p>Foram identificados grupos de risco (9,3%; nota média 38,8%), baixo rendimento (29%), na
+                                média (40%) e alto rendimento (21,7%). O grupo de risco também tem frequência média de
+                                73,7%.</p>
                         </div>
                     </div>
                 </article>
@@ -501,7 +589,8 @@
                     <div class="tldr-actions">
                         <div class="tldr-action">
                             <strong>Risco de reprovação</strong>
-                            <p>Busca ativa para enfrentar faltas, conectividade prioritária, tutoria individualizada e acompanhamento com as famílias.</p>
+                            <p>Busca ativa para enfrentar faltas, conectividade prioritária, tutoria individualizada e
+                                acompanhamento com as famílias.</p>
                         </div>
                         <div class="tldr-action">
                             <strong>Baixo rendimento</strong>
@@ -525,20 +614,29 @@
             <h2><span class="step-num">1</span> Contexto do Problema de Negócios & Decisões Analíticas</h2>
             <p>
                 O rendimento escolar e a evasão acadêmica decorrem de uma teia interligada de fatores demográficos,
-                socioeconômicos, estruturais e comportamentais. A preocupação com evasão é compartilhada entre órgãos públicos e educadores.
-                Como Cientista Social e ex-professora, o tema me é caro em uma camada pessoal, o que motivou a escolha para este side-project de
+                socioeconômicos, estruturais e comportamentais. A preocupação com evasão é compartilhada entre órgãos
+                públicos e educadores.
+                Como Cientista Social e ex-professora, o tema me é caro em uma camada pessoal, o que motivou a escolha
+                para este side-project de
                 análise de dados educacionais e construção de relatório em formato web interativo.
             <p>
                 O objetivo central deste estudo é <strong>fundamentar decisões pedagógicas em dados</strong>
-                por meio de um modelo preditor confiável sobre quais dimensões têm maior peso na nota final e na identificação de 
-                grupos de alunos em risco escolar. Deste modo, partimos de uma análise exploratória robusta, seguida de modelagem cumulativa OLS com correção de heterocedasticidade (HC3), 
-                e modelos de Feature Importance para identificar quais frentes devem ser atacadas por meio de políticas 
-                públicas de inclusão e permanência, ao lado de uma clusterização K-Means validada para segmentação pedagógica.
+                por meio de um modelo preditor confiável sobre quais dimensões têm maior peso na nota final e na
+                identificação de
+                grupos de alunos em risco escolar. Deste modo, partimos de uma análise exploratória robusta, seguida de
+                modelagem cumulativa OLS com correção de heterocedasticidade (HC3),
+                e modelos de Feature Importance para identificar quais frentes devem ser atacadas por meio de políticas
+                públicas de inclusão e permanência, ao lado de uma clusterização K-Means validada para segmentação
+                pedagógica.
             </p>
             <p>
-                <strong>Os resultados apontam um cenário claro para gestores e educadores</strong>: é necessário atacar a <strong>carência de infraestrutura digital, engajar os responsáveis e criar programas de reforço escolar e monitoria</strong> entre pares.
-                Alunos isolados e sem apoio pedagógico e familiar tendem a permanecer em um ciclo de baixo rendimento e risco de reprovação, enquanto aqueles com suporte adequado podem alcançar alto desempenho acadêmico.
-                Políticas de Inclusão e Permanência que aliem suporte pedagógico, engajamento da família e acesso à tecnologia têm maior eficácia em
+                <strong>Os resultados apontam um cenário claro para gestores e educadores</strong>: é necessário atacar
+                a <strong>carência de infraestrutura digital, engajar os responsáveis e criar programas de reforço
+                    escolar e monitoria</strong> entre pares.
+                Alunos isolados e sem apoio pedagógico e familiar tendem a permanecer em um ciclo de baixo rendimento e
+                risco de reprovação, enquanto aqueles com suporte adequado podem alcançar alto desempenho acadêmico.
+                Políticas de Inclusão e Permanência que aliem suporte pedagógico, engajamento da família e acesso à
+                tecnologia têm maior eficácia em
                 combater o baixo rendimento de alunos vulneráveis.
             </p>
 
@@ -572,7 +670,8 @@
                 evitar falsos positivos, indo além de regressões lineares aplicadas sem critério.<br>
                 2. <strong>Diagnóstico de VIF:</strong> Identificação e eliminação de variáveis com colinearidade
                 inflacionada para melhor ajuste dos modelos de Machine Learning aplicados em seguida (&ge; 5).<br>
-                3. <strong>Blocos Conceituais Cumulativos escolhidos com base na literatura de Políticas Públicas:</strong> Demografia &rarr; Estrutura Familiar &rarr;
+                3. <strong>Blocos Conceituais Cumulativos escolhidos com base na literatura de Políticas
+                    Públicas:</strong> Demografia &rarr; Estrutura Familiar &rarr;
                 Tecnologia &rarr; Hábitos Escolares, comparando R² ajustado e AIC.<br>
                 4. <strong>Correção de Heterocedasticidade:</strong> Erros-padrão robustos HC3 de MacKinnon-White.<br>
                 5. <strong>Pipeline Anti-Leakage:</strong> Separação treino/teste antes de imputação e padronização.<br>
@@ -590,18 +689,26 @@
         <div class="section-card">
             <h2><span class="step-num">2</span> Passo a Passo Metodológico & Modelos Cumulativos OLS</h2>
             <p>
-                O ponto de partida aqui foi <strong>conceitual</strong>: a literatura de sociologia da educação sugere que fatores demográficos e socioeconômicos 
-                são <strong>mediadores do comportamento escolar, e não determinantes diretos</strong>. Para além de rodar modelos 
+                O ponto de partida aqui foi <strong>conceitual</strong>: a literatura de sociologia da educação sugere
+                que fatores demográficos e socioeconômicos
+                são <strong>mediadores do comportamento escolar, e não determinantes diretos</strong>. Para além de
+                rodar modelos
                 cegamente com todas as variáveis disponíveis,
-                ancorei as decisões analíticas neste norte: o que interfere no rendimento acadêmico de 
-                alunos para além de características demográficas? Agrupamos as features em 4 blocos e ajustamos modelos incrementais,
+                ancorei as decisões analíticas neste norte: o que interfere no rendimento acadêmico de
+                alunos para além de características demográficas? Agrupamos as features em 4 blocos e ajustamos modelos
+                incrementais,
                 monitorando o ganho de explicação real (<code>R² ajustado</code>) e o balanço de parcimônia dado pelo
                 Critério de Informação de Akaike (<code>AIC</code>)
-                <p>
-                    O segundo ponto de partida foi <strong>a acionabilidade</strong>: é importante que os resultados do modelo possam ser traduzidos em políticas públicas 
-                    e ações pedagógicas que efetivamente sejam aplicáveis à realidade das escolas. Por isso, a clusterização K-Means 
-                    foi validada e segmentou os alunos em 4 grupos distintos: alunos de alto rendimento, alunos de médio rendimento, alunos de baixo rendimento e alunos em situação de risco. Isso permite criar planos de ação pedagógicos específicos para cada perfil, otimizando recursos públicos e maximizando o impacto das intervenções.
-                </p>
+            <p>
+                O segundo ponto de partida foi <strong>a acionabilidade</strong>: é importante que os resultados do
+                modelo possam ser traduzidos em políticas públicas
+                e ações pedagógicas que efetivamente sejam aplicáveis à realidade das escolas. Por isso, a clusterização
+                K-Means
+                foi validada e segmentou os alunos em 4 grupos distintos: alunos de alto rendimento, alunos de médio
+                rendimento, alunos de baixo rendimento e alunos em situação de risco. Isso permite criar planos de ação
+                pedagógicos específicos para cada perfil, otimizando recursos públicos e maximizando o impacto das
+                intervenções.
+            </p>
             </p>
 
             <div class="table-responsive">
@@ -660,31 +767,42 @@
 
             <p>
                 <strong>Interpretação Simples dos Resultados:</strong>
-                O AIC é o Critério de Informação de Akaike, aplicado à modelos de Machine Learning, é utilizado para avaliar a qualidade
-                de diferentes modelos. Penaliza o overfitting e favorece modelos mais simples, desde que expliquem bem os dados. 
+                O AIC é o Critério de Informação de Akaike, aplicado à modelos de Machine Learning, é utilizado para
+                avaliar a qualidade
+                de diferentes modelos. Penaliza o overfitting e favorece modelos mais simples, desde que expliquem bem
+                os dados.
                 O <em>AIC</em> caiu drasticamente de 74.799 para 72.576. Menor AIC indica um modelo superior, que premia
-                a capacidade explicativa sem carregar termos redundantes. 
-                
-                <p>
-                    Como esperado pela literatura que mobilizei do meu background de Cientista Social, a dimensão escolar (horas de dedicação, apoio institucional via tutorias
-                    e frequência) agregou quase 3 pontos percentuais de R² e atenuou a penalidade dos fatores socioeconômicos,
+                a capacidade explicativa sem carregar termos redundantes.
+
+            <p>
+                Como esperado pela literatura que mobilizei do meu background de Cientista Social, a dimensão escolar
+                (horas de dedicação, apoio institucional via tutorias
+                e frequência) agregou quase 3 pontos percentuais de R² e atenuou a penalidade dos fatores
+                socioeconômicos,
                 demonstrando o efeito mediador do comportamento na realidade econômica e social dos alunos.
             </p>
 
             <h3>O Forest Plot dos Coeficientes Robustos (HC3)</h3>
-            <h4>Nível escolar dos pais, acesso a computador e internet, tutorias extras e renda são as variáveis com maior impacto no rendimento acadêmico.</h4>
-            <p>A inclusão tecnológica, altamente acionável, tem um impacto de quase 1 ponto percentual na nota final, enquanto a faixa de renda familiar de menor renda acarreta uma perda de quase 6 pontos percentuais.</strong> 
-                    É possível combinar estes dois insights através de políticas de inclusão digital direcionadas de forma mais intensiva para alunos de menor renda.</p>
+            <h4>Nível escolar dos pais, acesso a computador e internet, tutorias extras e renda são as variáveis com
+                maior impacto no rendimento acadêmico.</h4>
+            <p>A inclusão tecnológica, altamente acionável, tem um impacto de quase 1 ponto percentual na nota final,
+                enquanto a faixa de renda familiar de menor renda acarreta uma perda de quase 6 pontos
+                percentuais.</strong>
+                É possível combinar estes dois insights através de políticas de inclusão digital direcionadas de forma
+                mais intensiva para alunos de menor renda.</p>
             <p>
-                Devido à presença de heterocedasticidade nos resíduos, isto é, uma dispersão desigual dos erros ao longo das variáveis explicativas
+                Devido à presença de heterocedasticidade nos resíduos, isto é, uma dispersão desigual dos erros ao longo
+                das variáveis explicativas
                 (teste de Breusch-Pagan com p-valor &lt; 0.10 e
                 Jarque-Bera com assimetria residual),
                 o modelo foi reajustado com estimador sanduíche <code>HC3</code> de MacKinnon-White, garantindo
                 erros-padrão e intervalos de confiança não inflacionados.
             </p>
             <p>
-                O Forest Plot abaixo exibe os coeficientes Beta (impacto percentual na nota) e Intervalos de Confiança de 95% do modelo OLS HC3. Cada ponto percentual 
-                de variação em uma variável explicativa corresponde a um impacto percentual na nota final do aluno, mantendo todas as demais condições constantes.
+                O Forest Plot abaixo exibe os coeficientes Beta (impacto percentual na nota) e Intervalos de Confiança
+                de 95% do modelo OLS HC3. Cada ponto percentual
+                de variação em uma variável explicativa corresponde a um impacto percentual na nota final do aluno,
+                mantendo todas as demais condições constantes.
             </p>
 
             <div class="img-container">
@@ -704,7 +822,8 @@
                 <li><code>study_hours_per_week (&beta; = +0.18)</code>: Cada hora adicional de estudo extraclasse por
                     semana agrega em média <strong>0,18 p.p.</strong> na avaliação final.</li>
                 <li><code>has_computer_or_laptop (&beta; = +0.94)</code>: A disponibilidade de computador em casa agrega
-                    <strong>quase 1 ponto percentual completo</strong> na nota média do estudante.</li>
+                    <strong>quase 1 ponto percentual completo</strong> na nota média do estudante.
+                </li>
             </ul>
         </div>
 
@@ -761,15 +880,16 @@
             </div>
 
             <div class="img-container">
-                <img src="viz/08_rf_permutation_e_predicoes.png"
-                    alt="Feature Importance e Predições Reais vs Preditas">
+                <img src="viz/08_rf_permutation_e_predicoes.png" alt="Feature Importance e Predições Reais vs Preditas">
                 <div class="img-caption">Figura 2: (Esquerda) Feature Importance no teste (n_repeats=10,
                     scoring=R²). (Direita) Dispersão de valores reais vs. preditos.</div>
             </div>
 
             <p>
-                <p>Para educadores e gestores públicos isso tem um <strong>significado acionável claro</strong>: para além da faixa de renda familiar,
-            não passível de intervenção direta, é possível atuar incentivando o estudo extraclasse e promovendo programas de capacitação e engajamento dos pais.
+            <p>Para educadores e gestores públicos isso tem um <strong>significado acionável claro</strong>: para além
+                da faixa de renda familiar,
+                não passível de intervenção direta, é possível atuar incentivando o estudo extraclasse e promovendo
+                programas de capacitação e engajamento dos pais.
             </p>
             <p>
                 <strong>Por que a Feature Importance é crucial?</strong>
@@ -872,12 +992,14 @@
             <h2><span class="step-num">5</span> Conclusão: Diferenças Metodológicas & Plano Pedagógico</h2>
             <p>
                 Este projeto foi construído com uma abordagem inicial pouco robusta que foi posteriormente refatorada
-                 para uma metodologia mais confiável e acionável. Isso se deu por meio de <strong>peer review</strong> com colegas e comunidades
-                 de data science no Reddit, Discord, Stack Overflow e Telegram, contribuindo para meu aprendizado sobre a teoria estatística, complementar
-                 à minha experiência prática em educação e conceitual como Cientista Social.
-                 A seguir, apresentamos um comparativo técnico entre a abordagem inicial e a 
-                 abordagem robusta implementada, destacando as melhorias significativas em 
-                 termos de controle de erros, validação de modelos e segmentação pedagógica.
+                para uma metodologia mais confiável e acionável. Isso se deu por meio de <strong>peer review</strong>
+                com colegas e comunidades
+                de data science no Reddit, Discord, Stack Overflow e Telegram, contribuindo para meu aprendizado sobre a
+                teoria estatística, complementar
+                à minha experiência prática em educação e conceitual como Cientista Social.
+                A seguir, apresentamos um comparativo técnico entre a abordagem inicial e a
+                abordagem robusta implementada, destacando as melhorias significativas em
+                termos de controle de erros, validação de modelos e segmentação pedagógica.
             </p>
             <h3>Comparativo Técnico: Abordagem Inicial vs. Abordagem Robusta Implementada</h3>
             <div class="diff-grid">
@@ -886,18 +1008,26 @@
                     </h4>
                     <ul>
                         <li>Seleção de variáveis baseada em p-valor bruto univariado (alto risco de falsos positivos
-                            pelo problema de múltiplos testes) O p-valor é um bom indicativo inicial de significância, mas deve ser validado por meio de múltiplos testes bivariados e outros critérios mais robustos do arcabouço de Data Science.</li>
+                            pelo problema de múltiplos testes) O p-valor é um bom indicativo inicial de significância,
+                            mas deve ser validado por meio de múltiplos testes bivariados e outros critérios mais
+                            robustos do arcabouço de Data Science.</li>
                         <li>Sem verificação de multicolinearidade (coeficientes de regressão inflacionados por variáveis
-                            correlacionadas). Variáveis como escolaridade da mãe e do pai, faixas de renda e salário dos pais, por exemplo, 
-                            prejudicam a acurácia do modelo e inflacionam de forma injusta os pesos na variável de interesse.</li>
+                            correlacionadas). Variáveis como escolaridade da mãe e do pai, faixas de renda e salário dos
+                            pais, por exemplo,
+                            prejudicam a acurácia do modelo e inflacionam de forma injusta os pesos na variável de
+                            interesse.</li>
                         <li>Pré-processamento aplicado em todo o dataset antes da divisão (risco de vazamento de dados /
-                            <em>data leakage</em>). Consolida minha trajetória no aprendizado de etapas de deploy de modelos de ML, para além de rodá-los na minha máquina pessoal apenas, 
-                            impulsionando a colaboração e tornando os modelos replicáveis.</li>
+                            <em>data leakage</em>). Consolida minha trajetória no aprendizado de etapas de deploy de
+                            modelos de ML, para além de rodá-los na minha máquina pessoal apenas,
+                            impulsionando a colaboração e tornando os modelos replicáveis.
+                        </li>
                         <li>Importância do Random Forest medida por impureza de Gini pura (distorção em favor de
                             variáveis contínuas).</li>
                         <li>Ausência de baselines simples (impossibilidade de checar se o modelo complexo realmente
                             supera a média).</li>
-                        <li>Agrupamento K-Means sem diagnóstico empírico de silhueta e estabilização de convergência. Apesar da decisão conceitual e analítica de segmentar em 4 clusters, a ausência de validação empírica pode levar a resultados instáveis e não confiáveis.</li>
+                        <li>Agrupamento K-Means sem diagnóstico empírico de silhueta e estabilização de convergência.
+                            Apesar da decisão conceitual e analítica de segmentar em 4 clusters, a ausência de validação
+                            empírica pode levar a resultados instáveis e não confiáveis.</li>
                         </li>
                     </ul>
                 </div>
@@ -910,7 +1040,8 @@
                         <li>Cálculo iterativo do Variance Inflation Factor (VIF &lt; 5.0), limpando colinearidades
                             excessivas.</li>
                         <li>Arquitetura em Pipeline com <code>ColumnTransformer</code> estritamente acoplada após
-                            <code>train_test_split</code>.</li>
+                            <code>train_test_split</code>.
+                        </li>
                         <li>Avaliação por <em>Feature Importance</em> em conjunto de teste com repetições
                             estocásticas (n_repeats=10).</li>
                         <li>Validação comparativa contra Dummy Regressor e Regressão Linear com validação cruzada
@@ -925,8 +1056,11 @@
 
             <h3>Matriz Central de Diagnóstico & Ações Pedagógicas Recomendadas</h3>
             <p>
-                Os resultados apontam um cenário claro para gestores e educadores: é necessário atacar a carência de infraestrutura digital, engajar os responsáveis e criar programas de reforço escolar e monitoria entre pares.
-                Alunos isolados e sem apoio pedagógico e familiar tendem a permanecer em um ciclo de baixo rendimento e risco de reprovação, enquanto aqueles com suporte adequado podem alcançar alto desempenho acadêmico.
+                Os resultados apontam um cenário claro para gestores e educadores: é necessário atacar a carência de
+                infraestrutura digital, engajar os responsáveis e criar programas de reforço escolar e monitoria entre
+                pares.
+                Alunos isolados e sem apoio pedagógico e familiar tendem a permanecer em um ciclo de baixo rendimento e
+                risco de reprovação, enquanto aqueles com suporte adequado podem alcançar alto desempenho acadêmico.
             </p>
 
             <div class="table-responsive">
@@ -950,7 +1084,8 @@
                                 <strong>Busca Ativa & Resgate Imediato:</strong> Visitas domiciliares para combater o
                                 absenteísmo crônico,
                                 concessão prioritária de bolsas de conectividade e chips 4G, e alocação em tutoria
-                                intensiva individualizada (1:1). Programa de engajamento familiar com workshops de capacitação e acompanhamento do progresso do aluno.
+                                intensiva individualizada (1:1). Programa de engajamento familiar com workshops de
+                                capacitação e acompanhamento do progresso do aluno.
                             </td>
                         </tr>
                         <tr>
